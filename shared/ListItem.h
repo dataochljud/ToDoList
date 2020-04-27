@@ -39,7 +39,7 @@ This file is part of ToDoList.
 
 // The ListItem class
 
-public class ListItem {
+class ListItem {
 
 private:
   int iStart_date,iStop_date;

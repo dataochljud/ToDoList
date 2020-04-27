@@ -38,13 +38,14 @@ char tree[4096];
 /* 
  * Register App with GEM if an ACC. If not it returns -1.
  */
+int close_app() {return 0;}
 int init_app()
 {
 
   int prog_handle = appl_init();
 
   if (prog_handle != 0)
-    int me_id = menu_register("  ToDoList");
+    int ret =  menu_register(prog_handle,"  ToDoList");
   else
     return -1;
   // Load resource file
@@ -57,11 +58,11 @@ int init_app()
  */
 int main_program()
 {
-  int em;
-  char evt_buff[16];
+
+  short evt_buff[16];
   while (1) 
     {
-      void evnt_mesag(evt_buff);
+      int ret = evnt_mesag(evt_buff);
 
       // check if ACC menu item is clicked
       if (evt_buff[0] == 40)

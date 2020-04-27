@@ -14,13 +14,18 @@ This file is part of ToDoList.
     You should have received a copy of the GNU General Public License
     along with ToDoList.  If not, see <https://www.gnu.org/licenses/>.
  */
-/* File: ListItem.cpp
+/* 
+   Program: ToDoList 
+
+   Version: 0.1
+
+   File: ListItem.cpp
    
-   written by: Johan Tibbelin (johan@dataochljud.se)
+   Written by: Johan Tibbelin (johan@dataochljud.se)
 
-   Last changed: 2020-04-27 14:06:30
+  Copyright © 2020 Data och Ljud. All rights reserved.
 
-   Description: class for the List items the main data of the program.  
+  Last changed: 2020-04-27 15:32:30
  */
 
 // Includes and platform macros

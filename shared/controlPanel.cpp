@@ -14,10 +14,18 @@ This file is part of ToDoList.
     You should have received a copy of the GNU General Public License
     along with ToDoList.  If not, see <https://www.gnu.org/licenses/>.
  */
-/* File: ControlPanel.cpp
+/* 
+   Program: ToDoList 
+
+   Version: 0.1
+
+   File: ControlPanel.cpp
    
-   written by: Johan Tibbelin
-   Last changed: 2020-04-27 14:03:40
+   Written by: Johan Tibbelin (johan@dataochljud.se)
+
+  Copyright © 2020 Data och Ljud. All rights reserved.
+
+  Last changed: 2020-04-27 15:32:47
  */
 
 #include <cstdio>

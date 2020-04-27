@@ -11,6 +11,8 @@ private:
   int iStart_date,iStop_date;
   int iStart_time,iEnd_time;
   bool bStarted;
+  bool bPaused;
+  bool bStoped;
   bool bIs_late;
   char* cText;
   char* cDescription;
@@ -32,6 +34,18 @@ public:
       bStarted = true;
     else
       return false;
+    return true;
+  }
+  bool stop()
+  {
+    if (started)
+      {
+	bStoped = true;
+      } 
+    else 
+      {
+	return false;
+      }
     return true;
   }
 };

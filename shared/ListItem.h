@@ -19,7 +19,7 @@ This file is part of ToDoList.
 
    Version: 0.1
 
-   File: ListItem.cpp
+   File: ListItem.h
    
    Written by: Johan Tibbelin (johan@dataochljud.se)
 
@@ -30,7 +30,6 @@ This file is part of ToDoList.
 
 // Includes and platform macros
 
-#include "ListItem.h"
 #include <cstdio>
 #ifdef __ATARI_ST__
 #include <osbind.h>
@@ -38,37 +37,27 @@ This file is part of ToDoList.
 #endif
 #include <vector>
 
-// The ListItem class implementation
+// The ListItem class
 
+public class ListItem {
 
-ListItem::~ListItem() { }
-ListItem::ListItem() { }
-ListItem::ListItem(const char* text,const char* description, int start,int stop)
-  {
-    bStarted=false;
-    cText = text;
-    cDescription = description;
-    iStart_time = start;
-    iEnd_time = end;
-  }
-bool ListItem::start() 
-  {
-    if (!bStarted)
-      bStarted = true;
-    else
-      return false;
-    return true;
-  }
-bool ListItem::stop()
-  {
-    if (started)
-      {
-	bStoped = true;
-      } 
-    else 
-      {
-	return false;
-      }
-    return true;
-  }
-
+private:
+  int iStart_date,iStop_date;
+  int iStart_time,iEnd_time;
+  bool bStarted;
+  bool bPaused;
+  bool bStoped;
+  bool bIs_late;
+  char* cText;
+  char* cDescription;
+  
+public:
+  ~ListItem(); 
+    ListItem(); 
+    ListItem(const char* text,const char* description, int start,int stop);
+ 
+    bool start(); 
+ 
+    bool stop();
+ 
+};

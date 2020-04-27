@@ -30,7 +30,6 @@ This file is part of ToDoList.
 
 // Includes and platform macros
 
-#include "ListItem.h"
 #include <cstdio>
 #ifdef __ATARI_ST__
 #include <osbind.h>
@@ -38,12 +37,24 @@ This file is part of ToDoList.
 #endif
 #include <vector>
 
-// The ListItem class implementation
+// The ListItem class
 
+public class ListItem {
 
-ListItem::~ListItem() { }
-ListItem::ListItem() { }
-ListItem::ListItem(const char* text,const char* description, int start,int stop)
+private:
+  int iStart_date,iStop_date;
+  int iStart_time,iEnd_time;
+  bool bStarted;
+  bool bPaused;
+  bool bStoped;
+  bool bIs_late;
+  char* cText;
+  char* cDescription;
+  
+public:
+  ~ListItem() { }
+  ListItem() { }
+  ListItem(const char* text,const char* description, int start,int stop)
   {
     bStarted=false;
     cText = text;
@@ -51,7 +62,7 @@ ListItem::ListItem(const char* text,const char* description, int start,int stop)
     iStart_time = start;
     iEnd_time = end;
   }
-bool ListItem::start() 
+  bool start() 
   {
     if (!bStarted)
       bStarted = true;
@@ -59,7 +70,7 @@ bool ListItem::start()
       return false;
     return true;
   }
-bool ListItem::stop()
+  bool stop()
   {
     if (started)
       {
@@ -71,4 +82,4 @@ bool ListItem::stop()
       }
     return true;
   }
-
+};

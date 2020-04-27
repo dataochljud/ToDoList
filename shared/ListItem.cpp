@@ -6,13 +6,13 @@ This file is part of ToDoList.
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Foobar is distributed in the hope that it will be useful,
+    ToDoList is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Foobar.  If not, see <https://www.gnu.org/licenses/>.
+    along with ToDoList.  If not, see <https://www.gnu.org/licenses/>.
  */
 /* File: ListItem.cpp
    
@@ -22,12 +22,17 @@ This file is part of ToDoList.
 
    Description: class for the List items the main data of the program.  
  */
+
+// Includes and platform macros
+
 #include <cstdio>
 #ifdef __ATARI_ST__
 #include <osbind.h>
 #include <gem.h>
 #endif
 #include <vector>
+
+// The ListItem class
 
 public class ListItem {
 

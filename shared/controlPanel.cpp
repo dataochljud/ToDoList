@@ -7,9 +7,9 @@ public class ControlPanel {
 private:
   bool tst;
 public:
-  ~ControlPanel() { }
+  ~ControlPanel() { printf("Control panel destroyed.")}
   ControlPanel() 
   {
-    
+    printf("Control panel created")
   }
 };

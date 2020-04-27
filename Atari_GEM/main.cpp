@@ -45,7 +45,7 @@ int init_app()
   int prog_handle = appl_init();
 
   if (prog_handle != 0)
-    int ret =  menu_register(prog_handle,"  ToDoList");
+    (void)  menu_register(prog_handle,"  ToDoList");
   else
     return -1;
   // Load resource file
@@ -54,7 +54,7 @@ int init_app()
   return 0;
 }
 /*
- * Main program loop.
+ * Main program.
  */
 int main_program()
 {
@@ -62,12 +62,13 @@ int main_program()
   short evt_buff[16];
   while (1) 
     {
-      int ret = evnt_mesag(evt_buff);
+      (void) evnt_mesag(evt_buff);
 
       // check if ACC menu item is clicked
       if (evt_buff[0] == 40)
 	{
 	  // Do stuff
+	  printf("Doing stuff here...\n");
 	}
     }
   

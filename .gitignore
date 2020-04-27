@@ -32,3 +32,4 @@
 *.app
 shared/#ListItem.cpp#
 *.cpp~
+*.h~

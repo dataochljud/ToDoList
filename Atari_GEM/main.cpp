@@ -32,18 +32,24 @@ This file is part of ToDoList.
 #include <osbind.h>
 #include <gem.h>
 #include "../shared/ListItem.h"
+
+// Rsrc tree
+char tree[4096];
 /* 
  * Register App with GEM if an ACC. If not it returns -1.
  */
 int init_app()
 {
+
   int prog_handle = appl_init();
 
-  if (prog_handle!=0)
+  if (prog_handle != 0)
     int me_id = menu_register("  ToDoList");
   else
     return -1;
-
+  // Load resource file
+  rsrc_load("TODOLIST.RSC");
+  rsrc_gaddr(0,0,tree);
   return 0;
 }
 /*
@@ -52,12 +58,18 @@ int init_app()
 int main_program()
 {
   int em;
+  char evt_buff[16];
   while (1) 
     {
-      em = evnt_mesag(0);
-      
-    }
+      void evnt_mesag(evt_buff);
 
+      // check if ACC menu item is clicked
+      if (evt_buff[0] == 40)
+	{
+	  // Do stuff
+	}
+    }
+  
 }
 
 int main() {

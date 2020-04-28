@@ -31,6 +31,7 @@ This file is part of ToDoList.
 #include <cstdio>
 #include <osbind.h>
 #include <gem.h>
+#include "../shared/list.h"
 #include "../shared/ListItem.h"
 
 // Rsrc tree

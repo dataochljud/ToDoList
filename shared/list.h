@@ -29,15 +29,16 @@ This file is part of ToDoList.
  */
 #ifndef _LIST_H_
 #define _LIST_H_
+#include "listItem.h"
 #include <vector>
 
 class List
 {
  private:
-  vector vToDoList;
+  std::vector<ListItem> vToDoList;
  public:
-  insert();
-  remove();
+  bool insert(ListItem e);
+  bool remove(int num);
   
  List();
   ~List();

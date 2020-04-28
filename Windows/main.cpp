@@ -27,39 +27,16 @@ This file is part of ToDoList.
 
   Last changed: 2020-04-27 15:32:30
  */
-
-// Includes and platform macros
-#ifndef _LISTITEM_H_
-#define _LISTITEM_H_
 #include <cstdio>
-#ifdef __ATARI_ST__
-#include <osbind.h>
-#include <gem.h>
-#endif
-#include <vector>
+#include "../shared/list.h"
+#include "../shared/ListItem.h"
+#include <windows.h>
 
-// The ListItem class
+int main()
+{
 
-class ListItem {
+  // Do stuff...
 
-private:
-  int iStart_date,iStop_date;
-  int iStart_time,iEnd_time;
-  bool bStarted;
-  bool bPaused;
-  bool bStoped;
-  bool bIs_late;
-  char* cText;
-  char* cDescription;
-  
-public:
-  ~ListItem(); 
-    ListItem(); 
-    ListItem(const char* text,const char* description, int start,int stop);
- 
-    bool start(); 
- 
-    bool stop();
- 
-};
-#endif // ListItem.h
+  printf("Doing stuff..");
+  return 0;
+}
